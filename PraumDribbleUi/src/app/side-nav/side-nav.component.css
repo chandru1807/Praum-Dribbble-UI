@@ -1,0 +1,49 @@
+.listFlex{
+    display: flex;
+    min-height: 0px;
+    justify-content: space-around;
+    
+}
+
+.flexWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listStyle{
+    cursor: pointer;
+    text-align: center;
+    transition: border-left 0.3s;
+}
+
+.fa-ul{
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px){
+    .listFlex{
+        flex-direction: row;
+        width: 100vh;
+    }
+    .flexWrapper{
+        width: 100vh;
+    }
+}
+
+@media only screen and (min-width: 601px){
+    .listFlex{
+        flex-direction: column;
+        height: 100%;
+    }
+    .flexWrapper{
+        height: 100vh;
+    }
+}
+
+i{
+    transition: transform 0.3s, color 0.3s;
+}
+i:hover{
+    transform: scale(1.2, 1.2);
+}

@@ -1,0 +1,45 @@
+<div class="flexWrapper">
+
+  <div style="text-align: center;flex: 1;">
+    <span style="color: white; font-weight: 700;">Praum</span>
+  </div>
+
+
+  <div style="height: 100%;flex: 5;">
+    <ul class="fa-ul listFlex">
+      <li title="Home" (click)="navItemClicked('home')"
+        [ngStyle]="{'border-left' : activeItem === 'home' ? 'white solid 5px':'transparent solid 5px'}"
+        class="listStyle">
+        <i [ngStyle]="{'color' : activeItem === 'home' ? 'white':'#c6ccd3'}" class="fa fa-home fa-2x"></i>
+      </li>
+      <li title="Menu" (click)="navItemClicked('menu')"
+        [ngStyle]="{'border-left' : activeItem === 'menu' ? 'white solid 5px':'transparent solid 5px'}"
+        class="listStyle">
+        <i [ngStyle]="{'color' : activeItem === 'menu' ? 'white':'#c6ccd3'}" class="fa fa-bars fa-2x"></i>
+      </li>
+      <li title="Folder" (click)="navItemClicked('folder')"
+        [ngStyle]="{'border-left' : activeItem === 'folder' ? 'white solid 5px':'transparent solid 5px'}"
+        class="listStyle">
+        <i [ngStyle]="{'color' : activeItem === 'folder' ? 'white':'#c6ccd3'}" class="fa fa-folder fa-2x"></i>
+      </li>
+      <li title="Comment" (click)="navItemClicked('comment')"
+        [ngStyle]="{'border-left' : activeItem === 'comment' ? 'white solid 5px':'transparent solid 5px'}"
+        class="listStyle">
+        <i [ngStyle]="{'color' : activeItem === 'comment' ? 'white':'#c6ccd3'}" class="fa fa-comment fa-2x"></i>
+      </li>
+      <li title="Settings" (click)="navItemClicked('settings')"
+        [ngStyle]="{'border-left' : activeItem === 'settings' ? 'white solid 5px':'transparent solid 5px'}"
+        class="listStyle">
+        <i [ngStyle]="{'color' : activeItem === 'settings' ? 'white':'#c6ccd3'}" class="fa fa-cog fa-2x"></i>
+      </li>
+    </ul>
+  </div>
+
+  <div style="flex: 2;">
+    <ul class="fa-ul listFlex">
+        <li title="Signout" class="listStyle">
+            <i style = "color: orange; border-left: transparent solid 5px;"class="fa fa-sign-out fa-2x"></i>
+        </li>
+    </ul>
+  </div>
+</div>
