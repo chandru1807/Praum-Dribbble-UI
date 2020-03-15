@@ -14,7 +14,7 @@
 .listStyle{
     cursor: pointer;
     text-align: center;
-    transition: border-left 0.3s;
+    transition: border-left 0.5s;
 }
 
 .fa-ul{
@@ -42,8 +42,9 @@
 }
 
 i{
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s, color 0.5s;
 }
 i:hover{
     transform: scale(1.2, 1.2);
 }
+

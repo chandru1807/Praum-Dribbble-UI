@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'side-nav',
@@ -8,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class SideNavComponent implements OnInit {
 
   public activeItem:string = 'home';
+  @Output() activeNavChange = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
 
   navItemClicked(itemName:string){
-    console.log(itemName);
+    
     this.activeItem = itemName;
     console.log(this.activeItem);
-    
+    this.activeNavChange.emit(itemName);
   }
 
 }

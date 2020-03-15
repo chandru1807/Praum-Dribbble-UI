@@ -1,9 +1,18 @@
 <div class="row">
   <div class="col-sm-1 padded" style="background-color: #454360; color: aliceblue;width: 100vh;">
-    <side-nav></side-nav>
+    <side-nav (activeNavChange)="onActiveItemChange($event)"></side-nav>
   </div>
   <div class="col-sm-8">
-
+    <ng-container *ngIf="activeItem !== 'home'">
+      <div class="inprogressFlex">
+        <div>Don't be Greedy. It is just a mockup ;)</div>
+        <div style="font-size: 0.7em;">JK! Functionality Coming Soon. :D</div>
+        <div>
+          <i style="color: #454360;" class="fa fa-cog fa-4x"></i>
+        </div>
+      </div>
+      
+    </ng-container>
   </div>
   <div class="col-sm-3" style="background-color: #f0f3fe;">
 

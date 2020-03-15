@@ -1,3 +1,20 @@
 .padded{
     padding: 1em 0;
 }
+
+.fa-cog{
+    animation: cogRotate 2s linear infinite forwards;
+}
+
+@keyframes cogRotate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+.inprogressFlex{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
