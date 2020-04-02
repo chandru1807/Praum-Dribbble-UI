@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'PraumDribbleUi';
   activeItem: string = 'home'
+  activeTopTab = 'All';
   onActiveItemChange(itemName:string){
     this.activeItem = itemName;
   }

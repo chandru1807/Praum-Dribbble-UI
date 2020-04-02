@@ -1,9 +1,36 @@
 <div class="row">
-  <div class="col-sm-1 padded" style="background-color: #454360; color: aliceblue;width: 100vh;">
+  <div class="col-sm-1" style="background-color: #454360; color: aliceblue;width: 100vh;">
     <side-nav (activeNavChange)="onActiveItemChange($event)"></side-nav>
   </div>
   <div class="col-sm-8">
-    <ng-container *ngIf="activeItem !== 'home'">
+    <ng-container *ngIf="activeItem === 'home'; else inProgressTemplate">
+
+      <h3>Ongoing Projects</h3>
+      <div class="row">
+        <div class="col-md-7 row">
+          <div class="col-md-2 tabStyle" (click)="activeTopTab = 'All'" [ngClass]="{'highlightTab': activeTopTab === 'All'}">
+            All
+          </div>
+          <div class="col-md-2 tabStyle" (click)="activeTopTab = 'Current'" [ngClass]="{'highlightTab': activeTopTab === 'Current'}">
+            Current
+          </div>
+          <div class="col-md-2 tabStyle" (click)="activeTopTab = 'Pending'" [ngClass]="{'highlightTab': activeTopTab === 'Pending'}">
+            Pending
+          </div>
+          <div class="col-md-2 tabStyle" (click)="activeTopTab = 'Completed'" [ngClass]="{'highlightTab': activeTopTab === 'Completed'}">
+            Completed
+          </div>
+        </div>
+        <div class="col-md-5 row" style="align-items: center; justify-content: flex-end;">
+          <div class="col-md-2">
+            <i class="fa fa-align-center fa-2x"></i>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+
+    <ng-template #inProgressTemplate>
       <div class="inprogressFlex">
         <div>Don't be Greedy. It is just a mockup ;)</div>
         <div style="font-size: 0.7em;">JK! Functionality Coming Soon. :D</div>
@@ -11,10 +38,10 @@
           <i style="color: #454360;" class="fa fa-cog fa-4x"></i>
         </div>
       </div>
-      
-    </ng-container>
+    </ng-template>
+
   </div>
-  <div class="col-sm-3" style="background-color: #f0f3fe;">
+  <div class="col-sm-3 container" style="background-color: #f0f3fe;">
 
   </div>
 

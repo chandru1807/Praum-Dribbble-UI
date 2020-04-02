@@ -17,4 +17,34 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    animation: inProgesssAnimation 1.5s;
+}
+
+@keyframes inProgesssAnimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.tabStyle{
+    padding: 1%;
+    background-color: white;
+    border-radius: 10%;
+    text-align: center;
+    margin: 1%;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.tabStyle:hover{
+    color: orange;
+    transition: 0.5s;
+}
+
+.highlightTab{
+    background-color: #2e2c45;
+    color: white;
 }
